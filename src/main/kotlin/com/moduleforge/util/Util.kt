@@ -5,11 +5,11 @@
 package com.moduleforge.util
 
 object Util {
-   fun <T, U> addElementToValues(map: MutableMap<T, MutableSet<U>>, key: T, elem: U) {
+   fun <T, U> addNewValue(map: MutableMap<T, MutableSet<U>>, key: T, value: U) {
       val set = map[key]
       if (set == null)
-         map[key] = mutableSetOf(elem)
+         map[key] = mutableSetOf(value)
       else
-         map[key]!!.add(elem)
+         map[key]!!.add(value)
    }
 }
