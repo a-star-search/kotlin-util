@@ -5,7 +5,7 @@
 package com.moduleforge.util
 
 object Util {
-   fun <T, U> addNewValue(map: MutableMap<T, MutableSet<U>>, key: T, value: U) {
+   fun <T, U> addNewValueToEntryOfMap(map: MutableMap<T, MutableSet<U>>, key: T, value: U) {
       val set = map[key]
       if (set == null)
          map[key] = mutableSetOf(value)
