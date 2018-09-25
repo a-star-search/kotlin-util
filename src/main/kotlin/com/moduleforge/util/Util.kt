@@ -12,4 +12,11 @@ object Util {
       else
          map[key]!!.add(value)
    }
+   fun <T, U> addNewValuesToEntryOfMap(map: MutableMap<T, MutableSet<U>>, key: T, values: Set<U>) {
+      val set = map[key]
+      if (set == null)
+         map[key] = values.toMutableSet()
+      else
+         map[key]!!.addAll(values)
+   }
 }
